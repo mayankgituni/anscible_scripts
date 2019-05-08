@@ -2,8 +2,8 @@
 - name: Create Volume snapshots
   os_volume_snapshot:
     state: present
-    volumes: '{{ item.vol_name }}'
-    display_name: "{{ item.vol_name }}-{{ lookup('pip', 'date +%Y-%m-%d-%H-%M-%S') }}"
+    volume: '{{ item.vol_name }}'
+    display_name: "{{ item.vol_name }}-{{ lookup('pipe', 'date +%Y-%m-%d-%H-%M-%S') }}"
     wait: yes
     timeout: 700
     force: yes
